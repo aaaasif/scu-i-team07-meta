@@ -1,8 +1,22 @@
 import folium
+from folium.plugins import MarkerCluster 
 import pandas as pd
 from geopy.distance import great_circle
 from math import atan2, radians, degrees, sin, cos
 import numpy as np
+import csv
+
+routes = []
+
+with open("routes.csv", "r") as file:
+    reader = csv.reader(file)
+    next(reader)  
+    for row in reader:
+        start = row[0] 
+        end = row[1]  
+        fare = float(row[2]) 
+        airline = row[3]  
+        routes.append([start, end, fare, airline]) 
 
 def calculate_bearing(start, end):
     """Calculate the bearing between two geographic points."""
@@ -26,7 +40,6 @@ def great_circle_path(start, end, num_points=20):
 
 
 def bezier_curve(start, control, end, num_points=30):
-    """Generate a Bézier curve between two points."""
     return [
         (
             (1 - t) ** 2 * start[0] + 2 * (1 - t) * t * control[0] + t ** 2 * end[0],
@@ -37,18 +50,18 @@ def bezier_curve(start, control, end, num_points=30):
 
 airport_locations = {
     "LAX": (33.9416, -118.4085), "LGA": (40.7769, -73.8740), "BOS": (42.3656, -71.0096),
-    "ATL": (33.6407, -84.4277), "CLT": (35.2140, -80.9431), "JFK": (40.6413, -73.7781), "EWR": (40.6895, -74.1745)
+    "ATL": (33.6407, -84.4277), "CLT": (35.2140, -80.9431), "JFK": (40.6413, -73.7781), "EWR": (40.6895, -74.1745),
+    "MIA": (25.7933, -80.2906), "SFO": (37.6213, -122.3790), "ORD": (41.9742, -87.9073),
+    "DEN": (39.8617, -104.6731), "DFW": (32.8998, -97.0403), "DTW": (42.2124, -83.3534), "OAK": (37.6213, -122.3790)
 }
 
-routes = [
-    ("LGA", "LAX", 9207), ("LAX", "LGA", 9028), ("LAX", "ATL", 8720), ("ATL", "LAX", 8250),
-    ("LAX", "BOS", 8695), ("BOS", "LAX", 8243), ("LAX", "JFK", 8131), ("JFK", "LAX", 7876),
-    ("LAX", "EWR", 8466), ("CLT", "LAX", 7883)
-]
-
-df_routes = pd.DataFrame(routes, columns=["start", "end", "count"])
+df_routes = pd.DataFrame(routes, columns=["start", "end", "cheapestFare", "cheapestAirline"])
 
 flight_map = folium.Map(location=[37.0902, -95.7129], zoom_start=4)
+
+airport_cluster = MarkerCluster().add_to(flight_map)
+for airport, (lat, lon) in airport_locations.items():
+    folium.Marker(location=(lat, lon), tooltip=airport, icon=folium.Icon(color="blue", icon="plane", prefix="fa")).add_to(airport_cluster)
 
 def generate_color_gradient(num_colors):
     """Generate a color gradient for route visualization."""
@@ -61,10 +74,7 @@ airport_layers = {
     for airport in airport_locations
 }
 
-for airport, (lat, lon) in airport_locations.items():
-    folium.Marker(location=(lat, lon), tooltip=airport, icon=folium.Icon(color="blue", icon="plane", prefix="fa")).add_to(flight_map)
-
-for i, (start, end, count) in enumerate(routes):
+for i, (start, end, fare, airline) in enumerate(routes):
     if start not in airport_locations or end not in airport_locations:
         continue
 
@@ -79,13 +89,15 @@ for i, (start, end, count) in enumerate(routes):
     curved_path = bezier_curve(start_coords, control_points.get((start, end), control_points.get((end, start), None)), end_coords, num_points=30) if (start, end) in control_points or (end, start) in control_points else great_circle_path(start_coords, end_coords, num_points=30)
     
     route_color = route_colors[i]
-    folium.PolyLine(curved_path, color=route_color, weight=4, opacity=0.7, tooltip=f"{start} → {end}: {count} flights").add_to(airport_layers[start])
-    
+   
+    route_tooltip = f"{start} → {end}: Cheapest Fare: ${fare} | Airline: {airline}"
+    folium.PolyLine(curved_path, color=route_color, weight=4, opacity=0.7, tooltip=route_tooltip).add_to(airport_layers[start])
+
     mid_index = len(curved_path) // 2
     plane_location = curved_path[mid_index]
     icon_file = "plane.png" if end == "LAX" else "plane2.png"
-    folium.Marker(location=plane_location, icon=folium.CustomIcon(icon_image=icon_file, icon_size=(70, 70)), tooltip=f"{start} → {end}: {count} flights").add_to(airport_layers[start])
+    folium.Marker(location=plane_location, icon=folium.CustomIcon(icon_image=icon_file, icon_size=(70, 70)), tooltip=route_tooltip).add_to(airport_layers[start])
 
 folium.LayerControl(collapsed=False).add_to(flight_map)
-flight_map.save("flight_routes_map.html")
-print("Map saved as flight_routes_map.html.")
+flight_map.save("flight_routes_map_with_prices.html")
+print("Map saved as flight_routes_map_with_prices.html.")
