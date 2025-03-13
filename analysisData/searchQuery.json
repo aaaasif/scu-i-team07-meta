@@ -1,0 +1,464 @@
+[
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "OAK",
+    "cheapestFare": 463.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 704.4265
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "LGA",
+    "cheapestFare": 193.99,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 280.8139622641511
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "BOS",
+    "cheapestFare": 248.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 306.6237837837838
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "DEN",
+    "cheapestFare": 133.98,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 304.92914285714284
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "CLT",
+    "cheapestFare": 387.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 440.7908695652175
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "MIA",
+    "cheapestFare": 178.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 380.6789285714286
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "DFW",
+    "cheapestFare": 168.59,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 241.89400000000003
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "SFO",
+    "cheapestFare": 307.6,
+    "cheapestAirline": "Alaska Airlines",
+    "averageFare": 676.965
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "ORD",
+    "cheapestFare": 149.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 327.1364516129033
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "LAX",
+    "cheapestFare": 239.6,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 517.1939393939396
+  },
+  {
+    "startingAirport": "ATL",
+    "destinationAirport": "JFK",
+    "cheapestFare": 198.6,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 379.6449999999999
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "OAK",
+    "cheapestFare": 549.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 736.2063636363637
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "LGA",
+    "cheapestFare": 133.6,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 333.42454545454564
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "DEN",
+    "cheapestFare": 313.6,
+    "cheapestAirline": "United",
+    "averageFare": 356.2923076923079
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "CLT",
+    "cheapestFare": 268.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 651.4453846153847
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "MIA",
+    "cheapestFare": 337.2,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 666.8420000000001
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "DFW",
+    "cheapestFare": 252.61,
+    "cheapestAirline": "Delta",
+    "averageFare": 344.9115384615386
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "SFO",
+    "cheapestFare": 353.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 532.3103448275863
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "ATL",
+    "cheapestFare": 248.6,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 427.37173913043483
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "ORD",
+    "cheapestFare": 127.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 393.6159375000001
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "LAX",
+    "cheapestFare": 311.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 526.6258
+  },
+  {
+    "startingAirport": "BOS",
+    "destinationAirport": "JFK",
+    "cheapestFare": 268.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 460.43888888888887
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "OAK",
+    "cheapestFare": 435.1,
+    "cheapestAirline": "Delta",
+    "averageFare": 664.2222222222223
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "LGA",
+    "cheapestFare": 210.1,
+    "cheapestAirline": "United",
+    "averageFare": 302.17111111111126
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "BOS",
+    "cheapestFare": 97.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 132.42378378378373
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "DEN",
+    "cheapestFare": 172.48,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 363.6220000000001
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "MIA",
+    "cheapestFare": 210.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 361.19045454545454
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "DFW",
+    "cheapestFare": 243.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 279.5140384615387
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "SFO",
+    "cheapestFare": 344.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 656.0031111111111
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "ATL",
+    "cheapestFare": 336.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 407.57129032258086
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "ORD",
+    "cheapestFare": 201.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 226.54755555555568
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "LAX",
+    "cheapestFare": 188.49,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 410.7653947368417
+  },
+  {
+    "startingAirport": "CLT",
+    "destinationAirport": "JFK",
+    "cheapestFare": 210.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 375.2959375000002
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "OAK",
+    "cheapestFare": 123.98,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 564.1175000000001
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "LGA",
+    "cheapestFare": 208.61,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 272.31750000000005
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "BOS",
+    "cheapestFare": 313.6,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 331.8460344827588
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "CLT",
+    "cheapestFare": 296.61,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 360.8904166666667
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "MIA",
+    "cheapestFare": 311.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 430.0105882352943
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "DFW",
+    "cheapestFare": 192.99,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 429.5686956521741
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "SFO",
+    "cheapestFare": 163.98,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 451.5579166666668
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "ATL",
+    "cheapestFare": 214.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 320.59388888888884
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "ORD",
+    "cheapestFare": 244.6,
+    "cheapestAirline": "United",
+    "averageFare": 516.1316129032259
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "LAX",
+    "cheapestFare": 153.99,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 363.8941860465117
+  },
+  {
+    "startingAirport": "DEN",
+    "destinationAirport": "JFK",
+    "cheapestFare": 208.61,
+    "cheapestAirline": "Delta",
+    "averageFare": 494.5000000000002
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "OAK",
+    "cheapestFare": 348.61,
+    "cheapestAirline": "Delta",
+    "averageFare": 676.3650000000001
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "LGA",
+    "cheapestFare": 183.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 241.3535849056605
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "BOS",
+    "cheapestFare": 252.61,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 316.1083333333335
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "DEN",
+    "cheapestFare": 164.39,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 398.2087500000001
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "CLT",
+    "cheapestFare": 244.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 509.9100000000001
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "MIA",
+    "cheapestFare": 284.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 457.796
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "SFO",
+    "cheapestFare": 297.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 638.2942105263159
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "ATL",
+    "cheapestFare": 166.98,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 268.96074074074085
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "ORD",
+    "cheapestFare": 244.6,
+    "cheapestAirline": "United",
+    "averageFare": 561.38
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "LAX",
+    "cheapestFare": 264.09,
+    "cheapestAirline": "Frontier Airlines",
+    "averageFare": 389.86489795918385
+  },
+  {
+    "startingAirport": "DFW",
+    "destinationAirport": "JFK",
+    "cheapestFare": 183.6,
+    "cheapestAirline": "JetBlue Airways",
+    "averageFare": 378.67058823529413
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "OAK",
+    "cheapestFare": 367.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 636.4445000000001
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "LGA",
+    "cheapestFare": 190.59,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 224.7145833333335
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "BOS",
+    "cheapestFare": 132.61,
+    "cheapestAirline": "United",
+    "averageFare": 182.74
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "DEN",
+    "cheapestFare": 200.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 365.0887500000002
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "CLT",
+    "cheapestFare": 190.6,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 392.1557142857145
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "MIA",
+    "cheapestFare": 173.6,
+    "cheapestAirline": "United",
+    "averageFare": 379.92903225806475
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "DFW",
+    "cheapestFare": 238.58,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 352.52796610169486
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "SFO",
+    "cheapestFare": 369.1,
+    "cheapestAirline": "American Airlines",
+    "averageFare": 597.0207500000001
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "ATL",
+    "cheapestFare": 165.59,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 483.5567948717947
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "ORD",
+    "cheapestFare": 181.6,
+    "cheapestAirline": "Delta",
+    "averageFare": 186.74999999999994
+  },
+  {
+    "startingAirport": "DTW",
+    "destinationAirport": "LAX",
+    "cheapestFare": 278.59,
+    "cheapestAirline": "Spirit Airlines",
+    "averageFare": 590.6398507462686
+  }
+]
