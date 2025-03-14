@@ -1,0 +1,6 @@
+folium
+pandas
+geopandas
+geopy
+numpy
+ipywidgets

@@ -2,4 +2,5 @@ folium
 pandas
 geopandas
 geopy
-matplotlib
+numpy
+ipywidgets
