@@ -10,7 +10,7 @@ from branca.element import Element
 routes = []
 with open("routes.csv", "r") as file:
     reader = csv.reader(file)
-    next(reader)  # Skip header
+    next(reader)  
     for row in reader:
         start, end, fare, airline = row[0], row[1], float(row[2]), row[3]
         routes.append([start, end, fare, airline])
@@ -57,8 +57,11 @@ for airport, (lat, lon) in airport_locations.items():
     folium.Marker(location=(lat, lon), tooltip=airport, icon=folium.Icon(color="blue", icon="plane", prefix="fa")).add_to(airport_cluster)
 
 def generate_color_gradient(num_colors):
+    min_r, min_g, min_b = 32, 64, 96  
     return [
-        f"#{int(173 - (i / num_colors) * 173):02x}{int(216 - (i / num_colors) * 216):02x}{int(230 - (i / num_colors) * 230):02x}"
+        f"#{int(173 - (i / num_colors) * (173 - min_r)):02x}"
+        f"{int(216 - (i / num_colors) * (216 - min_g)):02x}"
+        f"{int(230 - (i / num_colors) * (230 - min_b)):02x}"
         for i in range(num_colors)
     ]
 
@@ -111,10 +114,10 @@ def create_table():
     ]
     
     table_html = """
-<div style="position: fixed; bottom: 10px; left: 10px; z-index: 9999; background: white; padding: 10px; 
-                border: 1px solid #ddd; border-radius: 8px; font-size: 12px; width: 30%; overflow-x: auto;">
-    <b style="font-size: 14px; font-weight: bold;">Airport Flight Data</b>
-    <table border="1" style="border-collapse: collapse; width: 100%; font-size: 12px;">
+<div id="draggable-table" style="position: fixed; bottom: 10px; left: 10px; z-index: 9999; background: white; padding: 10px; 
+                border: 1px solid #ddd; border-radius: 8px; font-size: 15px; width: 30%; overflow-x: auto; cursor: move;">
+    <b style="font-size: 15px; font-weight: bold;">Airport Flight Data</b>
+    <table border="1" style="border-collapse: collapse; width: 100%; font-size: 15px;">
         <thead style="background-color: #f2f2f2;">
             <tr>
                 <th style="padding: 6px; text-align: left;">Airport</th>
@@ -125,8 +128,6 @@ def create_table():
         </thead>
         <tbody>
     """
-    
-    # Apply striped rows and hover effect
     for index, (airport, departures, arrivals, total) in enumerate(data):
         row_color = row_colors[index % len(row_colors)]
         
@@ -140,14 +141,44 @@ def create_table():
             <td style="padding: 6px; text-align: center;">{total}</td>
         </tr>
         """
-    
     table_html += """
         </tbody>
     </table>
 </div>
+<script>
+    var dragElement = document.getElementById("draggable-table");
+
+    dragElement.onmousedown = function(event) {
+        var shiftX = event.clientX - dragElement.getBoundingClientRect().left;
+        var shiftY = event.clientY - dragElement.getBoundingClientRect().top;
+
+        dragElement.style.position = 'absolute';
+        dragElement.style.zIndex = 1000;
+        document.body.append(dragElement);
+
+        moveAt(event);
+
+        function moveAt(e) {
+            dragElement.style.left = e.clientX - shiftX + 'px';
+            dragElement.style.top = e.clientY - shiftY + 'px';
+        }
+
+        document.onmousemove = function(event) {
+            moveAt(event);
+        };
+
+        dragElement.onmouseup = function() {
+            document.onmousemove = null;
+            dragElement.onmouseup = null;
+        };
+    };
+
+    dragElement.ondragstart = function() {
+        return false;
+    };
+</script>
     """
     return table_html
-
 
 table = Element(create_table())
 m.get_root().html.add_child(table)
