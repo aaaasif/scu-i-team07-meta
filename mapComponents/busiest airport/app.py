@@ -128,7 +128,10 @@ def create_table():
         </thead>
         <tbody>
     """
+<<<<<<< HEAD
     
+=======
+>>>>>>> b1b7b2df76ff768e89393a7e14c3bba8be32a497
     for index, (airport, departures, arrivals, total) in enumerate(data):
         row_color = row_colors[index % len(row_colors)]
         
@@ -142,7 +145,6 @@ def create_table():
             <td style="padding: 6px; text-align: center;">{total}</td>
         </tr>
         """
-    
     table_html += """
         </tbody>
     </table>
