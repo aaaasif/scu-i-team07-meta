@@ -1,0 +1,62 @@
+[
+    {
+        "BussiestAIRPORTS": "LAX",
+        "departures": 103645,
+        "arrivals": 101148,
+        "total_flights": 204793
+    },
+    {
+        "BussiestAIRPORTS": "LGA",
+        "departures": 80752,
+        "arrivals": 80949,
+        "total_flights": 161701
+    },
+    {
+        "BussiestAIRPORTS": "BOS",
+        "departures": 76455,
+        "arrivals": 71371,
+        "total_flights": 147826
+    },
+    {
+        "BussiestAIRPORTS": "DFW",
+        "departures": 73045,
+        "arrivals": 74562,
+        "total_flights": 147607
+    },
+    {
+        "BussiestAIRPORTS": "ORD",
+        "departures": 70767,
+        "arrivals": 72157,
+        "total_flights": 142924
+    },
+    {
+        "BussiestAIRPORTS": "MIA",
+        "departures": 67672,
+        "arrivals": 73220,
+        "total_flights": 140892
+    },
+    {
+        "BussiestAIRPORTS": "SFO",
+        "departures": 71166,
+        "arrivals": 69163,
+        "total_flights": 140329
+    },
+    {
+        "BussiestAIRPORTS": "ATL",
+        "departures": 68423,
+        "arrivals": 71326,
+        "total_flights": 139749
+    },
+    {
+        "BussiestAIRPORTS": "CLT",
+        "departures": 68121,
+        "arrivals": 68511,
+        "total_flights": 136632
+    },
+    {
+        "BussiestAIRPORTS": "DEN",
+        "departures": 60115,
+        "arrivals": 63350,
+        "total_flights": 123465
+    }
+]

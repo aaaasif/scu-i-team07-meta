@@ -1,0 +1,213 @@
+[
+    {
+        "startingAirport": "LGA",
+        "layover": [
+            "DTW",
+            "SLC",
+            "ONT"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "253.1",
+        "Airlines": "Delta ",
+        "Travel time": "11h 44m"
+    },
+    {
+        "startingAirport": "LGA",
+        "layover": [
+            "XNA"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "376.6",
+        "Airlines": "American Airlines",
+        "Travel time": "8h 8m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "DTW",
+            "SLC",
+            "ONT"
+        ],
+        "destinationAirport": "LGA",
+        "fare": "253.1",
+        "Airlines": "Delta ",
+        "Travel time": "11h 44m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "XNA"
+        ],
+        "destinationAirport": "LGA",
+        "fare": "376.6",
+        "Airlines": "American Airlines",
+        "Travel time": "8h 11m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            " ONT",
+            "DEN"
+        ],
+        "destinationAirport": "ATL",
+        "fare": "253.99",
+        "Airlines": "Frontier Airlines",
+        "Travel time": "8h 11m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "ONT",
+            "DFW"
+        ],
+        "destinationAirport": "ATL",
+        "fare": "370.6",
+        "Airlines": "American Airlines",
+        "Travel time": "6h 2m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "MSP"
+        ],
+        "destinationAirport": "BOS",
+        "fare": "247.19",
+        "Airlines": "Sun Country Airlines",
+        "Travel time": "13h 47m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "Non-Stop"
+        ],
+        "destinationAirport": "BOS",
+        "fare": "353.6",
+        "Airlines": "United",
+        "Travel time": "5h 29m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "ONT",
+            " DFW"
+        ],
+        "destinationAirport": "EWR",
+        "fare": "228.6",
+        "Airlines": "Ameriacn Airlines",
+        "Travel time": "7h 31m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "CLT"
+        ],
+        "destinationAirport": "EWR",
+        "fare": "359.1",
+        "Airlines": "American Airlines",
+        "Travel time": "7h"
+    },
+    {
+        "startingAirport": "ATL",
+        "layover": [
+            "LAS",
+            "ONT"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$239.60 ",
+        "Airlines": "Frontier Airlines",
+        "Travel time": "12h 30m"
+    },
+    {
+        "startingAirport": "ATL",
+        "layover": [
+            "DFW"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "370.6",
+        "Airlines": "American Airlines",
+        "Travel time": "6h 50m"
+    },
+    {
+        "startingAirport": "BOS",
+        "layover": [
+            "PHX",
+            "ONT"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$311.60 ",
+        "Airlines": "American Airlines",
+        "Travel time": "8h 18m"
+    },
+    {
+        "startingAirport": "BOS",
+        "layover": [
+            "Non-Stop"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$353.60 ",
+        "Airlines": "JetBlue Airways",
+        "Travel time": "6h 18m"
+    },
+    {
+        "startingAirport": "LAX ",
+        "layover": [
+            "Non-Stop"
+        ],
+        "destinationAirport": "JFK",
+        "fare": "$361.60 ",
+        "Airlines": "Delta",
+        "Travel time": "5h 19m"
+    },
+    {
+        "startingAirport": "LAX",
+        "layover": [
+            "Non-Stop"
+        ],
+        "destinationAirport": "JFK",
+        "fare": "$366.60 ",
+        "Airlines": "United",
+        "Travel time": "5h 24m"
+    },
+    {
+        "startingAirport": "CLT",
+        "layover": [
+            "LAS",
+            "ONT"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$188.49 ",
+        "Airlines": "Frontier Airlines",
+        "Travel time": "12h 53m"
+    },
+    {
+        "startingAirport": "CLT",
+        "layover": [
+            "PHX"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$369.10 ",
+        "Airlines": "American Airlines",
+        "Travel time": "6h 31m"
+    },
+    {
+        "startingAirport": "JFK",
+        "layover": [
+            "PHX",
+            "ONT"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$366.60 ",
+        "Airlines": "American Airlines",
+        "Travel time": "7h 30m"
+    },
+    {
+        "startingAirport": "JFK",
+        "layover": [
+            "Non-Stop"
+        ],
+        "destinationAirport": "LAX",
+        "fare": "$412.60 ",
+        "Airlines": "American Airlines",
+        "Travel time": "6h 9m"
+    }
+]

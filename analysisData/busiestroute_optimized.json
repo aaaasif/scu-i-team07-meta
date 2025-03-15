@@ -1,0 +1,52 @@
+[
+    {
+        "startingAirport": "LGA",
+        "destinationAirport": "LAX",
+        "route count": 9207
+    },
+    {
+        "startingAirport": "LAX",
+        "destinationAirport": "LGA",
+        "route count": 9028
+    },
+    {
+        "startingAirport": "LAX",
+        "destinationAirport": "ATL",
+        "route count": 8720
+    },
+    {
+        "startingAirport": "LAX",
+        "destinationAirport": "BOS",
+        "route count": 8695
+    },
+    {
+        "startingAirport": "LAX",
+        "destinationAirport": "EWR",
+        "route count": 8466
+    },
+    {
+        "startingAirport": "ATL",
+        "destinationAirport": "LAX",
+        "route count": 8250
+    },
+    {
+        "startingAirport": "BOS",
+        "destinationAirport": "LAX",
+        "route count": 8243
+    },
+    {
+        "startingAirport": "LAX",
+        "destinationAirport": "JFK",
+        "route count": 8131
+    },
+    {
+        "startingAirport": "CLT",
+        "destinationAirport": "LAX",
+        "route count": 7883
+    },
+    {
+        "startingAirport": "JFK",
+        "destinationAirport": "LAX",
+        "route count": 7876
+    }
+]

@@ -1,0 +1,136 @@
+{
+    "lowest_average_price_by_month": [
+        {
+            "month": 6,
+            "avgTotalFare": 354.7401779690135
+        },
+        {
+            "month": 5,
+            "avgTotalFare": 343.43349163974636
+        },
+        {
+            "month": 4,
+            "avgTotalFare": 356.9261327250481
+        }
+    ],
+    "average_ticket_price_by_booking_lead": [
+        {
+            "lead_time": 31,
+            "avgTotalFare": 336.8563782973701
+        },
+        {
+            "lead_time": 53,
+            "avgTotalFare": 365.4516318521382
+        },
+        {
+            "lead_time": 34,
+            "avgTotalFare": 386.95311407546285
+        },
+        {
+            "lead_time": 28,
+            "avgTotalFare": 410.0710779544495
+        },
+        {
+            "lead_time": 26,
+            "avgTotalFare": 350.7627042802384
+        },
+        {
+            "lead_time": 27,
+            "avgTotalFare": 393.44331975966765
+        },
+        {
+            "lead_time": 44,
+            "avgTotalFare": 341.48270000576076
+        },
+        {
+            "lead_time": 12,
+            "avgTotalFare": 332.6911662819234
+        },
+        {
+            "lead_time": 22,
+            "avgTotalFare": 283.97275909357455
+        },
+        {
+            "lead_time": 47,
+            "avgTotalFare": 351.08234623363927
+        },
+        {
+            "lead_time": 1,
+            "avgTotalFare": 388.991030670383
+        },
+        {
+            "lead_time": 52,
+            "avgTotalFare": 318.9617795257437
+        },
+        {
+            "lead_time": 13,
+            "avgTotalFare": 361.3788337950592
+        },
+        {
+            "lead_time": 6,
+            "avgTotalFare": 429.66701474337
+        },
+        {
+            "lead_time": 16,
+            "avgTotalFare": 250.0253392971927
+        },
+        {
+            "lead_time": 3,
+            "avgTotalFare": 335.43097656177537
+        },
+        {
+            "lead_time": 20,
+            "avgTotalFare": 335.6226713704352
+        },
+        {
+            "lead_time": 40,
+            "avgTotalFare": 391.5579585858953
+        },
+        {
+            "lead_time": 57,
+            "avgTotalFare": 374.9336733960056
+        },
+        {
+            "lead_time": 54,
+            "avgTotalFare": 390.0831527150892
+        },
+        {
+            "lead_time": 1,
+            "avgTotalFare": 428.1240375974594
+        },
+        {
+            "lead_time": 6,
+            "avgTotalFare": 369.5039277712765
+        },
+        {
+            "lead_time": 3,
+            "avgTotalFare": 297.861216619684
+        },
+        {
+            "lead_time": 5,
+            "avgTotalFare": 360.2896059650739
+        },
+        {
+            "lead_time": 4,
+            "avgTotalFare": 303.52620459904296
+        },
+        {
+            "lead_time": 7,
+            "avgTotalFare": 344.73031996754867
+        },
+        {
+            "lead_time": 2,
+            "avgTotalFare": 369.3403120012385
+        }
+    ],
+    "average_ticket_price_by_lead_time_category": [
+        {
+            "category": "0-30 days",
+            "avgTotalFare": 339.1032502086508
+        },
+        {
+            "category": "31-60 days",
+            "avgTotalFare": 365.17497968727866
+        }
+    ]
+}
