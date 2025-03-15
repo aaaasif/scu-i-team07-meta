@@ -162,7 +162,7 @@ const TicketSearchPage = () => {
       setCheapestFlight(null);
       return;
     }
-
+  
     setIsLoading(true);
     
     // Simulate loading time
@@ -172,17 +172,30 @@ const TicketSearchPage = () => {
           flight.startingAirport.toUpperCase() === formData.from.toUpperCase() &&
           flight.destinationAirport.toUpperCase() === formData.to.toUpperCase()
       );
-
+  
       if (filteredFlights.length === 0) {
         setSearchStatus("No flights found for the selected route");
         setCheapestFlight(null);
       } else {
+        // Use the averageFare from the JSON data instead of calculating it
         const cheapest = filteredFlights.reduce((prev, current) =>
           prev.cheapestFare < current.cheapestFare ? prev : current
         );
-        setCheapestFlight(cheapest);
+        
+        // Get the averageFare from the JSON directly
+        // This assumes each flight record has its own averageFare value
+        const averageFare = Math.round(cheapest.averageFare);
+  
+        setCheapestFlight({
+          ...cheapest,
+          // Keep the original averageFare from the JSON
+          averageFare: averageFare,
+        });
+  
         setSearchStatus(
           <>
+            <b>Average Fare:</b> <b>${averageFare}</b>
+            <br />
             <b>{cheapest.cheapestAirline}</b> offers the cheapest fare of <b>${cheapest.cheapestFare}</b> from <b>{formData.from}</b> to <b>{formData.to}</b>
           </>
         );
@@ -191,6 +204,7 @@ const TicketSearchPage = () => {
       setIsLoading(false);
     }, 800);
   };
+    
 
   return (
     <div className="px-[30px] md:px-[30px] max-w-[1400px] mx-auto py-8 bg-gray-50 min-h-screen">
@@ -215,7 +229,7 @@ const TicketSearchPage = () => {
       )}
       
       {/* Results Section */}
-      {cheapestFlight && !isLoading && (
+            {cheapestFlight && !isLoading && (
         <div className="mt-8">
           {/* Section Title */}
           <div className="text-center mb-6">
@@ -233,7 +247,8 @@ const TicketSearchPage = () => {
             <div className="w-full sm:w-[85%] md:w-[70%] lg:w-[50%] xl:w-[40%] relative overflow-visible">
               {/* Card with glass morphism effect */}
               <div className="relative bg-white bg-opacity-40 backdrop-filter backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white border-opacity-20 hover:shadow-2xl transform hover:-translate-y-2 transition-all duration-500 ease-in-out">
-                {/* Best Deal Badge - Adjusted position and z-index */}
+                
+                {/* Best Deal Badge */}
                 <div className="absolute -top-4 -right-4 bg-gradient-to-r from-red-500 to-pink-500 text-white px-6 py-1 rounded-full font-bold text-sm shadow-lg transform rotate-12 hover:rotate-0 transition-all duration-300 z-10">
                   Best Deal!
                 </div>
@@ -242,19 +257,20 @@ const TicketSearchPage = () => {
                 <div className="absolute -bottom-16 -right-16 w-32 h-32 bg-blue-500 rounded-full opacity-10"></div>
                 <div className="absolute -top-16 -left-16 w-32 h-32 bg-purple-500 rounded-full opacity-10"></div>
                 
-                {/* Airline logo placeholder - Reduced size */}
+                {/* Airline logo placeholder */}
                 <div className="flex justify-center mb-4">
                   <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-indigo-600 rounded-full flex items-center justify-center text-white text-xl font-bold shadow-lg transform hover:rotate-12 transition-all duration-300">
                     {cheapestFlight.cheapestAirline.charAt(0)}
                   </div>
                 </div>
                 
+                {/* Title */}
                 <h3 className="text-xl font-bold text-center mb-4 text-gray-800 relative">
                   Cheapest Flight
                   <div className="h-1 w-12 bg-blue-500 mx-auto mt-2 rounded-full"></div>
                 </h3>
                 
-                {/* Flight Route Visualization with animated plane - Reduced height */}
+                {/* Flight Route Visualization */}
                 <div className="flight-path relative flex items-center justify-between mb-6 px-2">
                   <div className="text-center z-10">
                     <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-1">
@@ -300,7 +316,15 @@ const TicketSearchPage = () => {
                   </div>
                 </div>
                 
-                {/* Information sections - Reduced padding and margin */}
+                {/* Display the Average Fare */}
+                <div className="mb-4 bg-gradient-to-r from-yellow-50 to-yellow-100 p-3 rounded-lg hover:shadow-md transition-all duration-300">
+                  <p className="text-base font-semibold text-gray-700 flex justify-between items-center">
+                    <span>Average Fare:</span> 
+                    <span className="font-bold text-yellow-600 text-xl">${cheapestFlight.averageFare}</span>
+                  </p>
+                </div>
+                
+                {/* Display Cheapest Flight Details */}
                 <div className="mb-4 bg-gradient-to-r from-blue-50 to-indigo-50 p-3 rounded-lg hover:shadow-md transition-all duration-300">
                   <p className="text-base font-semibold text-gray-700 flex justify-between items-center">
                     <span>Airline:</span> 
@@ -315,7 +339,7 @@ const TicketSearchPage = () => {
                   </p>
                 </div>
                 
-                {/* Time & Date Placeholder */}
+                {/* Other information */}
                 {formData.departDate && (
                   <div className="mb-4 bg-gradient-to-r from-purple-50 to-pink-50 p-3 rounded-lg hover:shadow-md transition-all duration-300">
                     <p className="text-base font-semibold text-gray-700 flex justify-between items-center">
@@ -325,7 +349,6 @@ const TicketSearchPage = () => {
                   </div>
                 )}
                 
-                {/* Class Type */}
                 <div className="mb-4 bg-gradient-to-r from-amber-50 to-yellow-50 p-3 rounded-lg hover:shadow-md transition-all duration-300">
                   <p className="text-base font-semibold text-gray-700 flex justify-between items-center">
                     <span>Class:</span> 
