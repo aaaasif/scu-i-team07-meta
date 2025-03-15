@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeepSeek Chatbot</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-container">
+        <div class="chat-header">
+            <img src="deepseek-icon.png" alt="DeepSeek Icon" class="chat-icon">
+            <h2>DeepSeek AI Chatbot</h2>
+        </div>
+        
+        <!-- Welcome Message -->
+        <div id="welcome-message">
+            <h3>Hi, I'm DeepSeek.</h3>
+            <p>How can I help you today?</p>
+        </div>
+
+        <!-- FAQ Flashcards -->
+        <div class="faq-container">
+            <div class="faq-card" onclick="setQuestion('which months are the best to buy the tickets?')">which months are the best to buy the tickets?</div>
+            <div class="faq-card" onclick="setQuestion('which day has the lowest ticket fare?')">which day has the lowest ticket fare?</div>
+            <div class="faq-card" onclick="setQuestion('what is the best time to book flights?')">what is the best time to book flights?</div>
+            <div class="faq-card" onclick="setQuestion('which days has the most expensive ticket fare?')">which days has the most expensive ticket fare?</div>
+            <div class="faq-card" onclick="setQuestion('what is the layover from LGA to LAX?')">what is the layover from LGA to LAX?</div>
+            <div class="faq-card" onclick="setQuestion('what is the lowest price from BOS to MIA?')">what is the lowest price from BOS to MIA?</div>
+            <div class="faq-card" onclick="setQuestion('what is the average price from DEN to BOS?')">what is the average price from DEN to BOS?</div>
+           
+        </div>
+
+        <!-- Chat Messages -->
+        <div id="chat-box"></div>
+
+        <!-- Chat Input -->
+        <div class="chat-input">
+            <input type="text" id="user-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
